@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "TheSeasons";
+  src: url(./assets/fonts/Fontspring-DEMO-theseasons-lt.otf);
+  font-weight: 100;
+  font-style: normal;
+}

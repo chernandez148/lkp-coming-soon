@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.ComingSoon {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../../assets/images/scenic_landscape_4k.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.ComingSoon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent overlay */
+    z-index: 1;
+}
+
+/* Add this if you want your content to appear above the overlay */
+.coming-soon-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.coming-soon-content h1 {
+    font-family: "TheSeasons";
+    font-weight: 100;
+    font-size: 60px;
+}
+
+.coming-soon-content p {
+    font-family: "Roboto";
+    margin: 12px 0;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.coming-soon-content ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coming-soon-content ul li {
+    list-style-type: none;
+    margin: 0 8px;
+}

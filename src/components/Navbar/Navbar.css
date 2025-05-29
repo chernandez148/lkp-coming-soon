@@ -1,0 +1,9 @@
+.Navbar {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    width: calc(100% - 4rem);
+    height: 80px;
+    z-index: 2;
+}

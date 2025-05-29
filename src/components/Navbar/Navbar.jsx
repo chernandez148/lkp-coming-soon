@@ -4,6 +4,7 @@ function Navbar() {
   return (
     <div className="Navbar">
       <img src={Logo} width={50} />
+      <ul></ul>
     </div>
   );
 }

@@ -1,0 +1,9 @@
+.Authors {
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+.Authors .slick-list {
+    overflow: initial;
+}

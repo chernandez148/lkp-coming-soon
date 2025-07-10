@@ -1,0 +1,18 @@
+.NewReleases {
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.new-releases-container {
+    margin-top: 1rem;
+}
+
+.new-releases-container img {
+    width: 100%;
+}
+
+.new-releases-container .slick-track {
+    margin-left: 0;
+    margin-right: 0;
+}

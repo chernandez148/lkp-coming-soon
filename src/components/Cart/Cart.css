@@ -1,0 +1,46 @@
+.Cart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 400px;
+    background-color: white;
+    color: black;
+    padding: 1rem;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid black;
+}
+
+.Cart button {
+    box-shadow: none;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 1rem 0;
+}
+
+.item-description {
+    display: flex;
+}
+
+.item-name {
+    padding-left: .5rem;
+}
+
+.item-name h4 {
+    line-height: 20px;
+}
+
+.item .item-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

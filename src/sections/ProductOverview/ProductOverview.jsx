@@ -12,6 +12,7 @@ function ProductOverview({ product }) {
       addToCart({
         id: product.id,
         name: product.name,
+        author: product.meta_data.author,
         price: parseFloat(product.regular_price),
         image: product.images?.[0]?.src || "",
         quantity: 1,

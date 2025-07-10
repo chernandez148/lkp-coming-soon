@@ -5,6 +5,7 @@ import { IoIosSearch } from "react-icons/io";
 import { FaUserCircle } from "react-icons/fa";
 import { IoCartSharp } from "react-icons/io5";
 import { useSelector } from "react-redux";
+import Cart from "../Cart/Cart";
 
 function Navbar() {
   const cartData = useSelector((state) => state.cart.items);
@@ -43,6 +44,7 @@ function Navbar() {
           </button>
         </li>
       </ul>
+      <Cart />
     </nav>
   );
 }

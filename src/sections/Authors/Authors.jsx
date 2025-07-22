@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 function Authors() {
   const { data, loading, error } = useAxios(
-    "http://127.0.0.1:8000/api/authors"
+    "http://127.0.0.1:8000/api/v1/authors"
   );
 
   const settings = {

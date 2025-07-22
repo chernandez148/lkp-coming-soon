@@ -1,0 +1,39 @@
+.OrderSummary {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.OrderSummary h3 {
+    border-bottom: 1px solid #7b7b7b;
+    padding-bottom: .5rem;
+    font-size: 14px;
+    width: 100%;
+}
+
+.OrderSummary .item-info {
+    display: flex;
+    gap: 10px;
+}
+
+.item-info .item-description {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.item-description img {
+    margin-top: 10px;
+}
+
+.OrderSummary .sub-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.sub-total h3 {
+    border-bottom: 0;
+    padding-bottom: 0;
+    width: initial;
+}

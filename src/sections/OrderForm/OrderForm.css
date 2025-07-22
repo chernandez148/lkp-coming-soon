@@ -1,0 +1,56 @@
+.OrderForm {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.OrderForm form {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.OrderForm h3 {
+    border-bottom: 1px solid #7b7b7b;
+    padding-bottom: .5rem;
+    font-size: 14px;
+}
+
+.OrderForm .billing-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.billing-field label {
+    font-size: 12px;
+    margin-bottom: .5rem;
+    color: #d5d5d5;
+}
+
+.billing-field input {
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid #7b7b7b;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.form-row .billing-field {
+    flex: 1;
+}
+
+.OrderForm .error {
+    color: #ff8282;
+    font-size: 12px;
+}
+
+.OrderForm button {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #2D2D2D;
+    font-weight: 600;
+}

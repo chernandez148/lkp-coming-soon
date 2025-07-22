@@ -12,7 +12,7 @@
 .Navbar ul {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 15px;
 }
 
 .Navbar li {
@@ -53,6 +53,11 @@
 .Navbar .login-btn button {
     padding: 5px 12px;
     border-radius: 30px;
+}
+
+.Navbar .login-btn a {
+    display: flex;
+    align-items: center;
 }
 
 .Navbar .login-btn svg {

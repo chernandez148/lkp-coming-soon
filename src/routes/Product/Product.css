@@ -1,5 +1,17 @@
 .Product {
     padding: 6rem 0;
-    width: 80%;
+    width: 1200px;
     margin: 0 auto;
+}
+
+@media(max-width: 1250px) {
+    .Product {
+        width: 1000px;
+    }
+}
+
+@media(max-width: 1050px) {
+    .Product {
+        width: 90%;
+    }
 }

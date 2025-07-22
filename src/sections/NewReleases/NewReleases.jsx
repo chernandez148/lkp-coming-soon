@@ -7,15 +7,14 @@ import "./NewReleases.css";
 
 function NewReleases() {
   const { data, loading, error } = useAxios(
-    "http://127.0.0.1:8000/api/products"
+    "http://127.0.0.1:8000/api/v1/products",
+    true
   );
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
   const newReleases = data.slice(0, 10);
-
-  console.log(data);
 
   const settings = {
     dots: true,

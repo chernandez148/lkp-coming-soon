@@ -5,12 +5,20 @@ import { IoIosSearch } from "react-icons/io";
 import { FaUserCircle } from "react-icons/fa";
 import { IoCartSharp } from "react-icons/io5";
 import { useSelector } from "react-redux";
+import { useState } from "react";
+import { selectCurrentUser } from "../../redux/slices/userSlice";
 import Cart from "../Cart/Cart";
 
 function Navbar() {
+  const user = useSelector(selectCurrentUser);
   const cartData = useSelector((state) => state.cart.items);
+  const [toggleCart, setToggleCart] = useState(false);
 
-  console.log(cartData);
+  const openCart = () => {
+    setToggleCart(true);
+  };
+
+  console.log(user);
 
   return (
     <nav className="Navbar">
@@ -33,18 +41,28 @@ function Navbar() {
           </button>
         </li>
         <li className="cart-btn">
-          <button>
+          <button onClick={openCart}>
             <IoCartSharp size={20} />
           </button>
           <span>{cartData.length}</span>
         </li>
         <li className="login-btn">
-          <button>
-            Login <FaUserCircle size={20} />
-          </button>
+          {user ? (
+            <button>
+              <Link to="/profile">
+                {user?.display_name} <FaUserCircle size={20} />
+              </Link>
+            </button>
+          ) : (
+            <button>
+              <Link to="/login">
+                Login <FaUserCircle size={20} />
+              </Link>
+            </button>
+          )}
         </li>
       </ul>
-      <Cart />
+      <Cart toggleCart={toggleCart} setToggleCart={setToggleCart} />
     </nav>
   );
 }

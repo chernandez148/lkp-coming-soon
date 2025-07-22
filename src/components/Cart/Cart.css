@@ -3,21 +3,44 @@
     top: 0;
     right: 0;
     height: 100vh;
-    width: 400px;
+    width: 0;
+    padding: 0;
+    overflow: hidden;
     background-color: white;
     color: black;
-    padding: 1rem;
+    transition: all 0.3s ease-in-out;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    pointer-events: none;
 }
+
+.Cart.open {
+    width: 350px;
+    padding: 1rem;
+    overflow-y: auto;
+    pointer-events: auto;
+}
+
 
 .cart-header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-bottom: 1rem;
     border-bottom: 1px solid black;
 }
 
 .Cart button {
+    background: none;
+    border: none;
+    cursor: pointer;
     box-shadow: none;
+}
+
+.items {
+    margin-top: 1rem;
+    overflow-y: auto;
+    max-height: calc(100vh - 200px);
 }
 
 .item {
@@ -25,6 +48,11 @@
     justify-content: space-between;
     gap: 25px;
     padding: 1rem 0;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.item:last-child {
+    border-bottom: none;
 }
 
 .item-description {
@@ -32,15 +60,69 @@
 }
 
 .item-name {
-    padding-left: .5rem;
+    padding-left: 0.5rem;
 }
 
-.item-name h4 {
+.item-name h5 {
     line-height: 20px;
+    margin: 0;
 }
 
-.item .item-price {
+.item-name img {
+    background-color: #353535;
+    width: 12px;
+    height: 12px;
+    padding: 4px;
+    border-radius: 50%;
+    margin-top: 0.5rem;
+}
+
+.item-price {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-end;
+}
+
+.cart-footer {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ccc;
+}
+
+.cart-footer p {
+    text-align: center;
+    margin-top: .5rem;
+    font-size: 10px;
+}
+
+.checkout-btn {
+    margin-top: 0.5rem;
+    width: 100%;
+    background-color: #222 !important;
+    color: #fff;
+    padding: .5rem 1rem !important;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.checkout-btn:hover {
+    background-color: #444;
+}
+
+.empty-cart {
+    margin-top: 2rem;
+    text-align: center;
+    color: #777;
+}
+
+@media(max-width: 400px) {
+    .Cart.open {
+        width: calc(100% - 2rem);
+    }
+
+    .item {
+        padding: .5rem 0;
+    }
 }

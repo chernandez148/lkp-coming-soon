@@ -32,9 +32,15 @@ h3 {
   font-weight: 400;
 }
 
-h4, h5, h6 {
+h4,
+h5,
+h6 {
   font-weight: 300;
   color: #575757;
+}
+
+button {
+  cursor: pointer;
 }
 
 .jumbo-text {

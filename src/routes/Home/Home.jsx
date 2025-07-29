@@ -11,7 +11,6 @@ function Home() {
       <Hero />
       <TopSellers />
       <NewReleases />
-      <Banner backgroundImage={BackgroundImage} height={600} />
     </main>
   );
 }

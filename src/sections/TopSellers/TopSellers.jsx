@@ -4,20 +4,30 @@ import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./NewReleases.css";
+import "./TopSellers.css";
+import { useEffect, useState } from "react";
 
-function NewReleases() {
+function TopSellers() {
   const { data, loading, error } = useAxios(
     "http://127.0.0.1:8000/api/v1/products",
     true
   );
+  const [topSellers, setTopSellers] = useState([]);
 
+  useEffect(() => {
+    if (data) {
+      // Sort products by total_sales in descending order
+      const sortedProducts = [...data].sort(
+        (a, b) => b.total_sales - a.total_sales
+      );
+      // Take top 10 products
+      const top10 = sortedProducts.slice(0, 10);
+      setTopSellers(top10);
+    }
+  }, [data]);
+
+  if (loading) return <p>Loading top sellers...</p>;
   if (error) return <p>Error: {error.message}</p>;
-
-  // Create placeholder data when loading
-  const newReleases = loading
-    ? Array(10).fill({ id: Math.random() }) // Create 10 placeholder items
-    : data?.slice(0, 10);
 
   const settings = {
     dots: true,
@@ -55,11 +65,11 @@ function NewReleases() {
   };
 
   return (
-    <section className="NewReleases">
-      <h2>New Releases</h2>
-      <div className="new-releases-container">
+    <section className="TopSellers">
+      <h2>Top Sellers</h2>
+      <div className="top-sellers-container">
         <Slider {...settings}>
-          {newReleases?.map((product) => (
+          {topSellers?.map((product) => (
             <div key={product.id}>
               <Link to={loading ? "#" : `/product/${product.id}`}>
                 <div className={loading ? "image-placeholder" : ""}>
@@ -84,4 +94,4 @@ function NewReleases() {
   );
 }
 
-export default NewReleases;
+export default TopSellers;

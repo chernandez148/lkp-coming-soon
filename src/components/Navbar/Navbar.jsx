@@ -50,7 +50,7 @@ function Navbar() {
           {user ? (
             <button>
               <Link to="/profile">
-                {user?.display_name} <FaUserCircle size={20} />
+                {user?.slug} <FaUserCircle size={20} />
               </Link>
             </button>
           ) : (

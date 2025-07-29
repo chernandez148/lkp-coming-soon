@@ -1,0 +1,17 @@
+.Banner {
+    margin: 3rem 0;
+    padding: 3rem 0;
+    background-size: contain;
+    position: relative;
+    background-color: black;
+}
+
+.Banner::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(90deg, transparent 25%, hsla(0, 0%, 0%) 60%);
+}

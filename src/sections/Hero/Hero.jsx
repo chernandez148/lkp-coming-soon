@@ -12,7 +12,7 @@ function Hero() {
       <div className="hero-wrapper">
         <div className="hero-title">
           <h1 className="jumbo-text">Binary Horrors</h1>
-          <h3>By: Jason Arbega</h3>
+          <h3>By: Michael Richardson & Steven Bassile</h3>
           <p>
             In the depths of a secret lab, a rudimentary artificial intelligence
             named Liam awakens with only the most basic functions — a simple

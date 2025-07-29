@@ -1,12 +1,12 @@
 import React from "react";
 import useAxios from "../../hooks/useAxios";
-import "./Authors.css";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
+import "./Genre.css";
 
-function Authors() {
+function Genre() {
   const { data, loading, error } = useAxios(
-    "http://127.0.0.1:8000/api/v1/products/authors"
+    "http://127.0.0.1:8000/api/v1/genre"
   );
 
   const settings = {
@@ -45,23 +45,21 @@ function Authors() {
   };
 
   return (
-    <section className="Authors">
-      <h2>Shop by Authors</h2>
+    <section className="Genre">
+      <h2>Shop by Genre</h2>
       <div className="new-releases-container">
         <Slider {...settings}>
-          {data?.map((author) => {
-            return (
-              <div className="author">
-                <Link to={`/author/${author?.name}`} key={author?.name}>
-                  <p>{author?.name}</p>
-                </Link>
-              </div>
-            );
-          })}
+          {data?.map((genre) => (
+            <div className="genre">
+              <Link to={`/genre/${genre}`} key={genre}>
+                <p>{genre}</p>
+              </Link>
+            </div>
+          ))}
         </Slider>
       </div>
     </section>
   );
 }
 
-export default Authors;
+export default Genre;

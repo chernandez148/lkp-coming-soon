@@ -1,17 +1,18 @@
-.NewReleases {
+.TopSellers {
     width: 90%;
     margin: 0 auto;
+    padding: 2rem 0;
 }
 
-.new-releases-container {
+.top-sellers-container {
     margin-top: 1rem;
 }
 
-.new-releases-container img {
+.top-sellers-container img {
     width: 100%;
 }
 
-.new-releases-container .slick-track {
+.top-sellers-container .slick-track {
     margin-left: 0;
     margin-right: 0;
 }

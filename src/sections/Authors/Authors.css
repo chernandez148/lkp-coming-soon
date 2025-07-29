@@ -1,9 +1,19 @@
 .Authors {
     width: 90%;
     margin: 0 auto;
+    padding: 2rem 0;
 
 }
 
 .Authors .slick-list {
     overflow: initial;
+}
+
+.author p {
+    margin-right: 10px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: #ffffff;
+    color: black;
+    box-shadow: 0 0 20px black;
 }

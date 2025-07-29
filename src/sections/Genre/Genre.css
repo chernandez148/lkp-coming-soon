@@ -1,0 +1,10 @@
+.Genre {
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 0;
+
+}
+
+.Genre .slick-list {
+    overflow: initial;
+}
